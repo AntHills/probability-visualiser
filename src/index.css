@@ -15,14 +15,14 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 20px;
-  margin: 50px;
+  margin: 0.5rem;
   background-color: rgb(49, 51, 56);
 }
 
 .visualiser-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  margin-top: 10px;
 }
 
 .display-container {
@@ -35,16 +35,30 @@ body {
   flex: column;
 }
 
-.percentage-container span {
-  display: block;
-}
-
 .explanation-text {
   border-left: 1px solid;
   padding: 5px;
   margin-left: 30px;
   margin-bottom: 20px;
   width: 80%;
+}
+
+@media (max-width: 650px) {
+  .probability-display {
+    display: block;
+    text-align: center;
+  }
+
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .probability-container {
+    flex-direction: column;
+  }
 }
 
 .percentage-display {
@@ -55,9 +69,28 @@ body {
   font-size: 2rem;
 }
 
+.probability-container {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
 .probability-display {
   font-size: 2rem;
-  display: block;
+  margin: 2px 5px;
+}
+.probability-input-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.probability-controls {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .probability-input {
@@ -72,6 +105,7 @@ body {
   min-width: 1.7em;
   margin-left: 5px;
   text-align: center;
+  margin-right: 10px;
 }
 .attempts-input {
   background-color: rgb(49, 51, 56);
@@ -83,7 +117,8 @@ body {
   font-weight: bold;
   padding: 0px;
   min-width: 1.7em;
-  margin-left: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
   text-align: center;
 }
 
