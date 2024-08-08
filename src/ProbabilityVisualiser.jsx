@@ -86,7 +86,7 @@ function ProbabilityVisualiser() {
             winning
           </span>
         </div>
-        <span className="probability-display">If an event has a </span>
+        <span className="probability-display">If an event has a</span>
         <div>
           <span className="probability-input-display">1/</span>
           <input
@@ -98,7 +98,7 @@ function ProbabilityVisualiser() {
             ref={probabilityInputRef}
           />
         </div>
-        <span className="probability-display">of occurring</span>
+        <span className="probability-display">chance of occurring</span>
         <div className="probability-container">
           <span className="probability-display">After</span>
           <input
@@ -114,7 +114,7 @@ function ProbabilityVisualiser() {
         <div className="visualiser-container">
           <div className="display-container">
             <div className="percentage-container">
-              <span className="probability-display">There is a chance</span>
+              <span className="probability-display">There is a</span>
               <div className="probability-controls">
                 <span className="percentage-display">{percentage}%</span>
                 <input
