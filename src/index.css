@@ -57,6 +57,7 @@ body {
 
 .probability-display {
   font-size: 2rem;
+  display: block;
 }
 
 .probability-input {
@@ -65,13 +66,30 @@ body {
   border-top: none;
   border-left: none;
   border-right: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
   padding: 0px;
   min-width: 1.7em;
   margin-left: 5px;
+  text-align: center;
+}
+.attempts-input {
+  background-color: rgb(49, 51, 56);
+  color: rgb(242, 243, 245);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 0px;
+  min-width: 1.7em;
+  margin-left: 5px;
+  text-align: center;
 }
 
 .probability-input::-webkit-inner-spin-button,
-.probability-input::-webkit-outer-spin-button {
+.probability-input::-webkit-outer-spin-button,
+.attempts-input::-webkit-inner-spin-button,
+.attempts-input::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }

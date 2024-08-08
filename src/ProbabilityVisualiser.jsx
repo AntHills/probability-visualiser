@@ -5,6 +5,7 @@ function ProbabilityVisualiser() {
   const [probability, setProbability] = useState("128");
   const [attempts, setAttempts] = useState(0);
   const probabilityInputRef = useRef(null);
+  const attemptInputRef = useRef(null);
 
   useEffect(() => {
     probabilityInputRef.current.style.width =
@@ -13,9 +14,14 @@ function ProbabilityVisualiser() {
     setPercentage(calcPercentage());
   }, [probability]);
 
-  // useEffect(() => {
-  //   setPercentage(calcPercentage());
-  // }, [attempts]);
+  useEffect(() => {
+    if (attempts !== "Infinity") {
+      attemptInputRef.current.style.width =
+        attemptInputRef.current.value.length + "ch";
+    } else {
+      attemptInputRef.current.style.width = "50px";
+    }
+  }, [attempts]);
 
   useEffect(() => {
     setAttempts(calcAttempts());
@@ -64,7 +70,8 @@ function ProbabilityVisualiser() {
         </div>
         <div>
           <span className="probability-display">
-            If an event has a 1/
+            <span className="probability-display">If an event has a</span>
+            1/
             <input
               className="probability-input"
               type="number"
@@ -73,35 +80,37 @@ function ProbabilityVisualiser() {
               onChange={handleProbabilityChange}
               ref={probabilityInputRef}
             />{" "}
-            of occurring
+            <span className="probability-display">of occurring.</span>
+            <span className="probability-display">After</span>
           </span>
+          <input
+            type="number"
+            value={attempts}
+            onChange={handleAttemptsChange}
+            className="attempts-input"
+            ref={attemptInputRef}
+          />
+          <span className="probability-display">attempts</span>
         </div>
         <div className="visualiser-container">
           <div className="display-container">
             <div className="percentage-container">
+              <span className="probability-display">There is a</span>
               <span className="percentage-display">{percentage}%</span>
               <input
                 type="range"
                 min="0"
-                max="100"
+                max="99.90"
                 step="0.1"
                 value={percentage}
                 className="slider"
                 id="myRange"
                 onChange={handleSliderChange}
               />
+              <span className="probability-display">of success</span>
             </div>
           </div>
-          <div className="display-attempts-container">
-            <div>
-              <span className="attempts-display">{attempts}</span>
-            </div>
-            <input
-              type="number"
-              value={attempts}
-              onChange={handleAttemptsChange}
-            />
-          </div>
+          <div className="display-attempts-container"></div>
         </div>
       </div>
     </>
