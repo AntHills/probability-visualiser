@@ -114,7 +114,7 @@ function ProbabilityVisualiser() {
         <div className="visualiser-container">
           <div className="display-container">
             <div className="percentage-container">
-              <span className="probability-display">There is a </span>
+              <span className="probability-display">There is a chance</span>
               <div className="probability-controls">
                 <span className="percentage-display">{percentage}%</span>
                 <input
