@@ -1,8 +1,7 @@
-# React + Vite
+# Probability Visualiser
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Visualise the chance on winning an event with a fixed probability of occurring.
 
-Currently, two official plugins are available:
+This project can be previewed from the below link:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Unlucky](https://unlucky.appsbyjames.com/)
